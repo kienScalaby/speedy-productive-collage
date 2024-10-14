@@ -61,7 +61,7 @@ const Page: NextPageWithLayout = () => {
         <h1 className="mb-4 inline-block bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 bg-clip-text p-3 text-5xl font-semibold text-transparent md:mb-[40px]">
           Fast Collage Tool
         </h1>
-        <div className="relative flex w-auto flex-col md:max-h-[800px] md:max-w-[90vw]">
+        <div className="relative flex w-auto flex-col max-h-[800px] max-w-[90vw] md:min-w-auto min-w-[700px] overflow-x-auto">
           <div className="relative flex h-full w-auto justify-start overflow-auto rounded-t-2xl">
             <aside
               style={{

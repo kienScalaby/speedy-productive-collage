@@ -29,7 +29,7 @@ export const Modal = ({
         >
           &#8203;
         </span>
-        <div className="inline-block min-w-[900px] transform overflow-hidden rounded-lg bg-white text-left align-bottom shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-xl sm:align-middle">
+        <div className="inline-block md:min-w-[900px] transform overflow-hidden rounded-lg bg-white text-left align-bottom shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-xl sm:align-middle">
           <div className="flex flex-row items-center justify-between p-4">
             <h3 className="w-full truncate border-b pb-2 text-xl font-semibold uppercase text-gray-900">
               Choose Format
@@ -39,12 +39,12 @@ export const Modal = ({
             {COLLAGE_TEMPLATES_4_SQUARE?.map((item, index) => (
               <>
                 {item?.default ? (
-                  <div className="aspect-square w-[200px] rounded-xl border-[2px] border-gray-500 bg-gray-200 p-3 text-black">
+                  <div className="aspect-square w-[160px] md:w-[200px] rounded-xl border-[2px] border-gray-500 bg-gray-200 p-3 text-black">
                     {item?.name}
                   </div>
                 ) : (
                   <div
-                    className="aspect-square w-[200px] cursor-pointer rounded-xl border-2 border-gray-200 p-3 text-black"
+                    className="aspect-square w-[160px] md:w-[200px] cursor-pointer rounded-xl border-2 border-gray-200 p-3 text-black"
                     onClick={() => handleSelectFormat(index)}
                     style={{
                       border: formatSelected?.includes(index)
