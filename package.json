@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^2.2.8",
+    "@reduxjs/toolkit": "^2.3.0",
     "fabric": "^6.4.3",
     "jszip": "^3.10.1",
     "next": "14.2.15",
