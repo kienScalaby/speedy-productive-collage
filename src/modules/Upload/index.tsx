@@ -9,12 +9,22 @@ const ModuleUpload = () => {
   const { images } = useImageData();
   const [isOpen, setIsOpen] = useState(false);
   const [currImg, setCurrImg] = useState(0);
-
+  const arrayPreview = images
+    .flat()
+    ?.filter((item) => item?.file)
+    ?.map((item) => ({
+      src: item?.file,
+    }));
   const onPreview = (id: string) => {
-    const arr = images.flat();
-    const index = arr.findIndex((item) => item.id === id);
-    setCurrImg(index);
-    setIsOpen(true);
+    try {
+      const arr = images.flat()?.filter((item) => item?.file);
+      const index = arr.findIndex((item) => item.id === id);
+
+      setCurrImg(index);
+      setIsOpen(true);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -40,12 +50,7 @@ const ModuleUpload = () => {
           </div>
         ))}
         <ImgsViewer
-          imgs={images
-            .flat()
-            ?.filter((item) => item?.file)
-            ?.map((item) => ({
-              src: item?.file,
-            }))}
+          imgs={arrayPreview}
           currImg={currImg}
           showThumbnails={true}
           isOpen={isOpen}
