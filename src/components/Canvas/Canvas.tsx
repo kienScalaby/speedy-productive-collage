@@ -249,7 +249,7 @@ export default function Canvas(props: IProps) {
             templateIndex: templateIndex,
           })
         }
-        className="absolute right-6 top-6 z-40 flex h-6 w-6 items-center justify-center rounded-full bg-[#ffffff9b]"
+        className="absolute right-6 top-6 z-20 flex h-6 w-6 items-center justify-center rounded-full bg-[#ffffff9b]"
       >
         <BsEye className="w-[18px] max-w-[24px] text-[#356bf3]" />
       </button>

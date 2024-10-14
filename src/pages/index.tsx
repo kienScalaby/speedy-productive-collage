@@ -25,7 +25,7 @@ const Page: NextPageWithLayout = () => {
       toast.error("Maximum Template");
       return;
     }
-
+    toast.success("Added Successfully");
     addTemplate(formatSelected);
     setOpen(false);
     setFormatSelected([]);
@@ -48,6 +48,7 @@ const Page: NextPageWithLayout = () => {
   const handleAddGroup = () => {
     const newGroup = Array.from({ length: 4 }, () => ({ id: generateUUID() }));
     newGroupImage({ group: newGroup });
+    toast.success("Added Successfully");
   };
 
   useEffect(() => {
